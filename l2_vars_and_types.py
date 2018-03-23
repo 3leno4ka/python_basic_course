@@ -12,7 +12,12 @@ my_dict = {
 }
 print(type(my_dict))
 my_string = 'Mother'
-print(type(my_string))
+print(type(my_string))  #prints string type
+
+"""
+My long and important
+multiline text
+"""
 my_char = '1'
 print(type(my_char))
 name = input('Please, enter your name: ')
