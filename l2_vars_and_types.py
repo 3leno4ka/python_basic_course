@@ -11,12 +11,12 @@ my_dict = {
     "key2": "value2"
 }
 print(type(my_dict))
-my_string = 'mama'
+my_string = 'Mother'
 print(type(my_string))
 my_char = '1'
 print(type(my_char))
-name = input('enter your name: ')
-number = input('enter your number: ')
+name = input('Please, enter your name: ')
+number = input('Please, enter your number: ')
 
 print('name: ' + name)
 print('number: ' + number)
