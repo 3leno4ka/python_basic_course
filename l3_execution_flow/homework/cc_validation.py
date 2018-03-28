@@ -7,7 +7,7 @@ except ValueError:
     print("Cc number must contain only numbers!")
 
 cc_date_str = input("Enter cc expiration date in format \"mm/yy\":")
-cc_date = cc_date_str.split("/")
+cc_date = cc_date_str.split("/")   # метод "split()"-разбиение текста с заданным разделителем на элементы списка!
 
 try:
     cc_date_mm = int(cc_date[0])
