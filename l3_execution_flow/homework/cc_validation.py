@@ -22,6 +22,18 @@ try:
 except ValueError:
     print("Date error!")
 
+try:
+    cvv_code = int(input("Enter CVV code: "))
+    if len(str(cvv_code)) < 3:
+        print("CVV code is too short!")
+        exit()
+except ValueError:
+    print("Bad CVV code!")
+
+print("ha-ha-ha, i will use your credit card")
+
+
+
 
 
 
