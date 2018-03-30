@@ -1,4 +1,5 @@
-
+CURRENT_YEAR = 18
+CURRENT_MONTH = 4
 
 while True:
 
@@ -44,34 +45,38 @@ elif cc_number_list[0] == '5375':
     print("You use MonoBank credit card!")
 else:
     print("You use credit card from the unknown bank")
-    
+
 
 # except ValueError:
 #     print("Cc number must contain only numbers!")
-
-cc_date_str = input("Enter cc expiration date in format \"mm/yy\":")   # экранирование специальных символов
-cc_date = cc_date_str.split("/")   # метод "split()"-разбиение текста с заданным разделителем на элементы списка!
-
-try:
-    cc_date_mm = int(cc_date[0])
-    cc_date_yy = int(cc_date[1])
+while True:
+    cc_date_str = input("Enter cc expiration date in format \"mm/yy\":")   # экранирование специальных символов
+    cc_date = cc_date_str.split("/")   # метод "split()"-разбиение текста с заданным разделителем на элементы списка!
+    try:
+        cc_date_mm = int(cc_date[0])
+        cc_date_yy = int(cc_date[1])
+    except ValueError:
+        print("Date error! Must be a number")
+    if cc_date_yy < CURRENT_YEAR or cc_date_yy > 99:
+        print("Please, check year!")
+        continue
     if cc_date_mm < 1 or cc_date_mm > 12:
         print("Please, check month!")
-        exit()
-    if cc_date_yy < 0 or cc_date_yy > 99:
-        print("Please, check year!")
-        exit()
+        continue
+    if cc_date_yy == CURRENT_YEAR and cc_date_mm < CURRENT_MONTH:
+        print("Your cc already expired!")
+    break
 
-except ValueError:
-    print("Date error!")
-
-try:
-    cvv_code = int(input("Enter CVV code: "))
+while True:
+    cvv_code = input("Enter CVV code: ")
+    try:
+        int(cvv_code)
+    except ValueError:
+        print("Bad CVV code! Please, try again")
     if len(str(cvv_code)) < 3:
-        print("CVV code is too short!")
-        exit()
-except ValueError:
-    print("Bad CVV code!")
+        print("CVV code is too short! Please, try again")
+        continue
+    break
 
 print("ha-ha-ha, I will use your credit card")
 
