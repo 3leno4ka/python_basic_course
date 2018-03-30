@@ -38,7 +38,13 @@ while True:
         print("Your cc number is incorrect! Please, try again")
         continue
     break
-
+if cc_number_list[0] == '5167':
+    print("You use PrivatBank credit card!")
+elif cc_number_list[0] == '5375':
+    print("You use MonoBank credit card!")
+else:
+    print("You use credit card from the unknown bank")
+    
 
 # except ValueError:
 #     print("Cc number must contain only numbers!")
