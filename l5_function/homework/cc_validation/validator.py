@@ -4,6 +4,8 @@ CURRENT_MONTH = 4
 def card_has_errors(cc_number):
     cc_number_list = cc_number.split(" ")
     if len(cc_number_list) != 4:
+        # if os.os.environ["region"] = "China"
+        # list.len == 3
         print("Bad cc number format! Must have 4 blocks on digits! Try again!")
         return True
     cc_number_str = ''

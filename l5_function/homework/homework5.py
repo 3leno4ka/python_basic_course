@@ -1,8 +1,5 @@
 from .cc_validation import card_has_errors, print_bank, date_has_error, cvv_has_error
-
-# import os
-# CARD_TYPE = os.environ.get('CARD_TYPE')
-# print(CARD_TYPE)
+# os.environ["region"] = "China"
 
 while True:
     cc_number = input("Enter cc number in format \'XXXX XXXX XXXX XXXX\': \n")
