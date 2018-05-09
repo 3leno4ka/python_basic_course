@@ -11,6 +11,12 @@ def card_has_errors(cc_number):
     return True
 
 
+def phone_has_errors(phone):
+    if re.match(re.compile(r'\d'), phone[1:]):
+        return False
+    return True
+
+
 def print_bank(cc_number):
     cc_number_list = cc_number.split(" ")
     if cc_number_list[0] == '5167':
