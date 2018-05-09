@@ -1,5 +1,4 @@
-from .cc_validation import card_has_errors, print_bank, date_has_error, cvv_has_error
-# os.environ["region"] = "China"
+from cc_validation import card_has_errors, print_bank, date_has_error, cvv_has_error
 
 while True:
     cc_number = input("Enter cc number in format \'XXXX XXXX XXXX XXXX\': \n")
@@ -21,7 +20,10 @@ while True:
         continue
     break
 
+with open('credit_card.txt', 'w') as f:
+    f.write(f'cc number: {cc_number}\nexp. date: {cc_date_str}\ncvv: {cvv_code}')
 print("ha-ha-ha, I will use your credit card")
+
 
 
 
